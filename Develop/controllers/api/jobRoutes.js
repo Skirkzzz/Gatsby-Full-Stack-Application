@@ -1,11 +1,23 @@
 const router = require('express').Router();
-const { Project } = require('../../models');
+const { Job } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    const newProject = await Project.create({
+    const newJob = await Job.create({
       ...req.body,
-      user_id: req.session.user_id,
+  
+    });
+
+    res.status(200).json(newJob);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+router.put('/', async (req, res) => {
+  try {
+    const updateJob = await Job.update({
+      req.body
     });
 
     res.status(200).json(newProject);
@@ -19,7 +31,6 @@ router.delete('/:id', async (req, res) => {
     const projectData = await Project.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
       },
     });
 
