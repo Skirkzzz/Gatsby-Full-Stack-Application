@@ -1,0 +1,101 @@
+:root{
+    --primaryColor: #0076de;
+    --whiteColor:#fff;
+    --blackColor:#333;
+    --greyColor:#f6f8fa;
+    --labelColor:#64b1f5;
+    --yellowColor:#ffd723;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    outline:none;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    width: 100%;
+    height:auto;
+}
+
+h1 {
+    line-height:1.5;
+}
+
+.navbar {
+    width:100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    position:fixed;
+    top:0;
+    left:0;
+    padding: 1rem 2.5rem;
+    z-index:10;
+    color: var(--whiteColor);
+    background: black;
+}
+
+.navbar-logo > a {
+    letter-spacing: 2.5;
+    text-decoration: none;
+    color: var(--whiteColor)
+}
+
+.navbar-menu{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-menu > a {
+    color:var(--whiteColor);
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display:none;
+}
+
+.menu-toggle .bar {
+    width:15px;
+    height:2px;
+    margin: 3px auto;
+    transition: all 0.3 ease-in-out;
+    background-color: var(--whiteColor);
+    cursor:pointer;
+}
+
+header {
+    width:100%;
+    height:80%;
+    background-image: url("image/header-image.jpg");
+    background-position: no-repeat;
+    background-size: cover;
+    position:absolute;
+}
+
+.header-title {
+    position: absolute;
+    top: 7rem;
+    left: 3rem;
+    letter-spacing: 3;
+    font-weight: bolder;
+    font-size:52px;
+    color: var(--blackColor);
+    text-shadow: 4px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.search-wrapper{
+    width: 60%;
+    margin: auto;
+    position:relative;
+    min-width: 300px;
+    height: 3.5rem;
+}
+
+.search-box {
+    width: 100
+}
