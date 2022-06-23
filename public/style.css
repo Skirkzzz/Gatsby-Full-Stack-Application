@@ -94,6 +94,8 @@ header {
     position:relative;
     min-width: 300px;
     height: 3.5rem;
+}
 
-
+.search-box {
+    width: 100
 }
