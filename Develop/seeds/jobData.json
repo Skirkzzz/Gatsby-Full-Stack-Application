@@ -44,11 +44,63 @@ Manager might venerate them, amazed by so many buttons, colors and little dogs f
     I see many companies searching The Ultimate Coders. They are the Saint Graal in our industry. The ultimate goal of many recruiters out there.
     
     Often, it doesn’t matter if they can work well with others, have good communication skills, or good soft skills in general. No: they need to be sanctified by the Light of Technical Knowledge, the Finger of All Technical Skills, the Breath of Every Technical Concepts.",
-    "salary": "£50,000 in bitcoin"
+    "salary": "£1,000,000 in bitcoin"
     "location": "Warwick"
     "type": "Part Time"
     "author_id": "Selina"
     "company_name": "The Greatest Company in the Universe"
+  },
+  {
+    "job_title": "The Ultimate God",
+    "description": "This is a funny variant of the Ultimate Coder. Not only they have every technical skill you can ask for, but they are as well talented designers, magnificent project managers, wonderful customer care members, and they know everything about UX.
+
+    Searching a Fullstack Developer can be a conventional way to be on the quest of The Ultimate God. The job description will often go into a lengthy list of technologies and skills the future employee needs to have. After all, it makes sense: when you can have 10 employees in one, you reduce many costs.
+    
+    Unfortunately, if The Ultimate Coder is a myth, The Ultimate God is a scientific impossibility. Companies in quest of these ultra-dimensional beings will push any human, who can’t possibly be good in everything and anything, into burnout hell, before going themselves into a wall.
+    
+    Run away from this position, even if the salary is astronomical."
+    "salary": "1,000,000,000 in bitcoin"
+    "location": "Jason"
+    "type": "Full Time"
+    "author_id": "Selina"
+    "company_name": "The Greatest Company in the Universe"
+  },
+  {
+    "job_title": "The Junior Developer",
+    "description": "You’re “Junior” if you don’t have “enough” years of experience in the software industry. You’re the rookie, the newbie, the unskilled mistake-maker. Congratulation!
+
+    It implies as well that you have less knowledge and skills than everybody else who have more experience than you. Therefore, you’ll be, in general, less useful, providing less value.
+    
+    All of that stays pretty vague. If you look a bit closer, you begin to see some flaws..
+    
+    Run away from this position, even if the salary is astronomical."
+    "salary": "1,000 in bitcoin"
+    "location": "Leeds"
+    "type": "Full Time"
+    "author_id": "Selina"
+    "company_name": "The Greatest Company in the Universe"
+  },
+  {
+    "job_title": "Innovation Sherpa",
+    "description": "For some people, the term “sherpa” brings to mind an expedition to an exotic summit. Sherpas help guide you along the way, right? And maybe that’s why the title “Innovation Sherpa” has found its way into the tech vernacular.
+
+    These executives help guide their companies to the summit of innovation and can be responsible for things like mapping out and improving a company’s processes, overseeing user interviews, or bringing in outside perspectives, all in the service of making sure a company continues to grow and evolve.",
+    "salary": "£45,000 in bitcoin"
+    "location": "London"
+    "type": "Full Time"
+    "author_id": "Matteo"
+    "company_name": "The Greatest Company in the Metaverse"
+  },
+  {
+    "job_title": "Digital Prophet",
+    "description": "Once you’ve reached executive levels at some companies it seems you’re free to call yourself anything you want. “Digital Prophet” is one such example. It’s also a title that doesn’t become clearer with context.
+
+    The tech title “Digital Prophet” seems to be proprietary to David Shing or “Shingy,” an executive with the venerable mass media company AOL. A quick scan of Shingy’s homepage(opens in a new tab) only says that he “[works] across the globe to identify new opportunities for the business.” It also mentions that he speaks at conferences about trends and the future of the web (which is where all that prophesying theoretically comes in).",
+    "salary": "£40,000 in bitcoin"
+    "location": "Cornwall"
+    "type": "Full Time"
+    "author_id": "Tamin"
+    "company_name": "The Greatest Company in the UK"
   },
   
 ]
