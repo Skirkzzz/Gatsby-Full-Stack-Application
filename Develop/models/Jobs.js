@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, STRING } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Project extends Model {}
@@ -11,9 +11,8 @@ Project.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    title: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
@@ -23,16 +22,32 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
-      type: DataTypes.FLOAT,
+    date_expiring: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    location: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    user_id: {
+    type: {
+      type: DataTypes.STRING,
+    },
+    salary: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    author_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id',
       },
+    },
+    company_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
