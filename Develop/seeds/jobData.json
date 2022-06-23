@@ -1,0 +1,54 @@
+[
+  {
+    "job_title": "Frontend Developer",
+    "description": "This special specie of developer will deal with everything the end user can see or interact with, when the crazy software will be available to the populace. Typically, these developers will code using some good old CSS, HTML, and often JavaScript.
+Manager might venerate them, amazed by so many buttons, colors and little dogs flying all over the user interface. This can be a blessing, or a fatal curse.",
+    "salary": "£50,000 in bitcoin"
+    "location": "Manchester"
+    "type": "permanent"
+    "author_id": "Tamin"
+    "company_name": "The Greatest Company in the World"
+  },
+  {
+    "job_title": "The Backend Developer",
+    "description": "Mortal enemy of the Frontend Developer, the Backend Developer is a troglodyte who deals with everything nobody sees. This kind will put together the gears and cogs of a software, if you will. Try to open your car’s hood: it looks boring and complicated, but without it your car would have difficulties to move around.
+
+    Most people won’t understand what backend is about, not because everybody else is stupid, but because nobody cares. As a Backend Developer, I definitely respect that. I don’t care about cars, either.",
+    "salary": "£50,000 in bitcoin"
+    "location": "Warwick"
+    "type": "Part Time"
+    "author_id": "Matteo"
+    "company_name": "The Greatest Company in the Galaxy"
+  },
+  {
+    "job_title": "The Code Monkey",
+    "description": "If you care about development and the impact you have as a developer, you will thrive to be a Code Monkey as much as a fish will thrive to be in the Sahara.
+
+    As a Code Monkey, you’ll spend your time with your mouth shut and your finger producing billion of lines of code. You’ll be only there to follow blindly every decision taken by your superiors. Your name will be engraved in a scary and strict organizational chart.
+    
+    For your managers, a developer is a worker on a production line: you have a plan, you follow it by the letter and BAM! You have a software which will make everybody rich (except you, of course).
+    
+    As a Code Monkey, you don’t think. You produce.",
+    "salary": "£50,000 in bitcoin"
+    "location": "Warwick"
+    "type": "Part Time"
+    "author_id": "Selina"
+    "company_name": "The Greatest Company in the Universe"
+  },
+  {
+    "job_title": "The Ultimate Coder",
+    "description": "The Ultimate Coders are the best of the best. They need to know everything the other developers of the company know, plus the stuff nobody heard of.
+
+    They are human-Wikipedia-machine which can answer every questions about random topics, a possible winner of “Who Wants to Be a Millionaire - Developer Edition”. Infinity is not enough to speak about their knowledge and skills.
+    
+    I see many companies searching The Ultimate Coders. They are the Saint Graal in our industry. The ultimate goal of many recruiters out there.
+    
+    Often, it doesn’t matter if they can work well with others, have good communication skills, or good soft skills in general. No: they need to be sanctified by the Light of Technical Knowledge, the Finger of All Technical Skills, the Breath of Every Technical Concepts.",
+    "salary": "£50,000 in bitcoin"
+    "location": "Warwick"
+    "type": "Part Time"
+    "author_id": "Selina"
+    "company_name": "The Greatest Company in the Universe"
+  },
+  
+]
