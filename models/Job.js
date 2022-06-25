@@ -1,6 +1,5 @@
-const { Model, DataTypes, STRING } = require('sequelize');
-const { Job } = require('.');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Job extends Model {}
 
@@ -42,15 +41,15 @@ Job.init(
     author_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id',
+        model: "user",
+        key: "id",
       },
     },
     category_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'category',
-        key: 'id',
+        model: "category",
+        key: "id",
       },
     },
     company_name: {
@@ -63,7 +62,7 @@ Job.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'job',
+    modelName: "job",
   }
 );
 
