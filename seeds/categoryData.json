@@ -1,11 +1,11 @@
 [
   {
-    "category": "front end developer"
+    "name": "front end developer"
   },
   {
-    "category": "back end developer"
+    "name": "back end developer"
   },
   {
-    "category": "web developer"
+    "name": "web developer"
   }
 ]

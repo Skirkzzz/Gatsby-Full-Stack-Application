@@ -1,8 +1,8 @@
 const sequelize = require('../config/connection');
-const { User, Jobs, Category } = require('../models');
+const { User, Job, Category } = require('../models');
 
 const userData = require('./userData.json');
-const jobsData = require('./jobsData.json');
+const jobData = require('./jobsData.json');
 const categoryData = require('./categoryData.json');
 
 const seedDatabase = async () => {
@@ -13,17 +13,16 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const jobsData of JobsData) {
-    await Jobs.create({
-      ...Jobs,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+  const categories = await User.bulkCreate(categoryData, {
+    individualHooks: true,
+    returning: true,
+  });
 
-  for (const categoryData of categoryData) {
-    await categoryData.create({
-      ...Category,
+  for (const jobsRecord of JobsData) {
+    await Jobs.create({
+      ...jobsRecord,
       user_id: users[Math.floor(Math.random() * users.length)].id,
+      category_id: categories[Math.floor(Math.random() * categories.length)].id,
     });
   }
 
