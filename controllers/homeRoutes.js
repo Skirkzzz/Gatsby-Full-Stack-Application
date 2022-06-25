@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { getEnabledCategories } = require('trace_events');
 const { Category, User, Job } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -30,11 +31,8 @@ router.get('/', async (req, res) => {
   }
 });
 
-/*
-router.get('/id', async (req, res) => {
-  try {
-    console.log('Home page route is runninig');
-    const jobData = await Job.findByPk(req.params.id, {
+// Load up all the posts
+const postsData = await this.post.findAll({
       include: [
         {
           model: User,
@@ -44,6 +42,21 @@ router.get('/id', async (req, res) => {
         },
       ],
     });
+    // Serialize data so the template can read it
+    const posts = postsData.map((post) =>
+    post.get({ plain: true})
+
+//Load in categories and users so that these can be displayed
+const { categories, users} = await getEnabledCategories();
+
+res.render("homepage", {
+  posts,
+  categories,
+  users,
+  loggedIn: req.session.loggedIn,
+})
+
+
 
     // Serialize data so the template can read it
     const jobs = jobData.map((jobs) => jobs.get({ plain: true }));
