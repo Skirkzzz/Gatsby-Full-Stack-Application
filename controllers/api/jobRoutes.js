@@ -3,10 +3,9 @@ const { Job } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    const newJob = await Job.create({
-      ...req.body,
-  
-    });
+    const newJob = await Job.create(
+      req.body
+    );
 
     res.status(200).json(newJob);
   } catch (err) {
@@ -15,10 +14,9 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/', async (req, res) => {
+
   try {
-    const updateJob = await Job.update({
-      req.body
-    });
+    const updateJob = await Job.update(req.body);
 
     res.status(200).json(newProject);
   } catch (err) {

@@ -1,39 +1,64 @@
 const router = require('express').Router();
-const { Category, User, Jobs } = require('../models');
+const { Category, User, Job } = require('../models');
 const withAuth = require('../utils/auth');
-
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    const jobData = await Post.findByPk(req.params.id, {
+    console.log('Home page route is running');
+    const jobData = await Job.findAll({
       include: [
         {
           model: User,
-    
         },
         {
           model: Category,
         },
-        {
-          model: Jobs,
-        },
-      
       ],
     });
 
     // Serialize data so the template can read it
     const jobs = jobData.map((jobs) => jobs.get({ plain: true }));
 
+    console.log(jobs);
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      jobs, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      jobs,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+/*
+router.get('/id', async (req, res) => {
+  try {
+    console.log('Home page route is runninig');
+    const jobData = await Job.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+        },
+        {
+          model: Category,
+        },
+      ],
+    });
+
+    // Serialize data so the template can read it
+    const jobs = jobData.map((jobs) => jobs.get({ plain: true }));
+
+    console.log(jobs);
+    // Pass serialized data and session flag into template
+    res.render('homepage', {
+      jobs,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+*/
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {

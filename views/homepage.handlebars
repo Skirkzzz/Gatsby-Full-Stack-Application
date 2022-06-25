@@ -1,0 +1,49 @@
+<!--filter box-->
+<div class="filter-box">
+    <div class="filter-dropdown">
+
+
+        {{#each jobs as |job|}}
+        {{job.title}}
+        {{/each}}
+
+        <select class="filter-select" id="job-level" name="job-level">
+            <option>Job Level</option>
+            <option>Entry</option>
+            <option>Mid-Senior</option>
+            <option>Director</option>
+        </select>
+
+        <select class="filter-select" id="job-function" name="job-function">
+            <option>Job Function</option>
+            <option>IT</option>
+            <option>Management</option>
+            <option>Education</option>
+        </select>
+
+        <select class="filter-select" id="employement" name="employement">
+            <option>Employement Type</option>
+            <option>Internship</option>
+            <option>Part Time</option>
+            <option>Full Time</option>
+        </select>
+
+        <select class="filter-select" id="location" name="location">
+            <option>Locations</option>
+            <option>Remote</option>
+            <option>North-West</option>
+            <option>London</option>
+        </select>
+
+        <select class="filter-select" id="education" name="education">
+            <option>Education</option>
+            <option>High School</option>
+            <option>Bachelor's Degree</option>
+            <option>Master's Degree</option>
+        </select>
+
+
+
+
+    </div>
+</div>
