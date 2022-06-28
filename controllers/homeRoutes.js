@@ -71,6 +71,19 @@ router.get('/', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+
+  // Serialize data so the template can read it
+  const job = jobData.get({ plain: true });
+
+  console.log(job);
+  // Pass serialized data and session flag into template
+  res.render('job-details', {
+    job,
+    logged_in: req.session.logged_in
+  });
+} catch (err) {
+  res.status(500).json(err);
+
 });
 
 // Use withAuth middleware to prevent access to route
