@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { where, and } = require('sequelize/types');
 const { Category, User, Job } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -17,10 +18,8 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const categories = jobData.map((jobs) => jobs.get({ plain: true }));
+    const jobs = jobData.map((job) => job.get({ plain: true }));
 
-    router.get('/', async (req, res) => {
-      try {
         console.log('Categories are running');
         const categoriesData = await Category.findAll({
           include: [
@@ -34,51 +33,19 @@ router.get('/', async (req, res) => {
         });
     
         // Serialize data so the template can read it
-        const jobs = categoriesData.map((jobs) => jobs.get({ plain: true }));
+        const categories = categoriesData.map((category) => category.get({ plain: true }));
 
-        
-    const companies = [
-      {
-        company_name: 'Google',
-        numbe_of_job: 2,
-      },
-      {
-        company_name: 'FL1',
-        numbe_of_job: 2,
-      },
-      {
-        company_name: 'Microsoft',
-        numbe_of_job: 2,
-      },
-      {
-        company_name: '2U',
-        numbe_of_job: 2,
-      },
-      {
-        company_name: 'Totus',
-        numbe_of_job: 2,
-      },
-    ]
 
-    const categories = [
-      {
-        company_name: 'Remote',
-      },
-      {
-        company_name: 'Full Time',
-      },
-      {
-        company_name: 'Financial',
-      },
-      {
-        company_name: 'Egnineering',
-      },
-      {
-        company_name: 'Operational',
-      },
-    ]
+    const companies = [];
 
-    console.log(jobs);
+    jobs.forEach((job) => {
+      if (!companies.includes(job.company_name)) {
+        companies.push(job.company_name)
+      }
+    }
+      
+
+    
     // Pass serialized data and session flag into template
     res.render('homepage', {
       jobs,
@@ -89,7 +56,10 @@ router.get('/', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+}
 
+  router.get('/', async (req, res) => {
+    try {
   // Serialize data so the template can read it
   const job = jobData.get({ plain: true });
 
