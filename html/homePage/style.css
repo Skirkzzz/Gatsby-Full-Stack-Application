@@ -71,7 +71,7 @@ h1 {
 header {
     width:100%;
     min-height: 400px;
-    background-image: url("../public/image/header-image.jpg");
+    background-image: url("./header-image.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
