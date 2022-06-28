@@ -17,24 +17,8 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const categories = categoriesData.map((jobs) => jobs.get({ plain: true }));
+    const jobs = jobData.map((jobs) => jobs.get({ plain: true }));
 
-    router.get('/', async (req, res) => {
-      try {
-        console.log('Home page route is running');
-        const jobData = await Job.findAll({
-          include: [
-            {
-              model: User,
-            },
-            {
-              model: Category,
-            },
-          ],
-        });
-    
-        // Serialize data so the template can read it
-        const jobs = jobData.map((jobs) => jobs.get({ plain: true }));
     const companies = [
       {
         company_name: 'Google',
