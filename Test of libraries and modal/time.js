@@ -19,6 +19,7 @@ const customLabels = {
   },
   ...
   [
+    
     {
       // "second" labels are used for formatting the output.
       formatAs: 'second'
