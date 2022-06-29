@@ -2,11 +2,6 @@
 <div class="filter-box">
     <div class="filter-dropdown">
 
-
-        {{#each jobs as |job|}}
-        {{job.title}}
-        {{/each}}
-
         <select class="filter-select" id="job-level" name="job-level">
             <option>Job Level</option>
             <option>Entry</option>
@@ -41,9 +36,14 @@
             <option>Bachelor's Degree</option>
             <option>Master's Degree</option>
         </select>
-
-
-
-
     </div>
+</div>
+
+<div class="listing">
+
+    {{#each jobs as |job|}}
+    <h1>{{job.title}}</h1>
+    <h2>{{job.company_name}}</h2>
+    <a href="/jobs/{{job.id}}">Read More</a>
+    {{/each}}
 </div>

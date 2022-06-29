@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const { where, and } = require('sequelize/types');
 const { Category, User, Job } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
+
   try {
     console.log('Home page route is running');
     const jobData = await Job.findAll({
@@ -20,31 +20,20 @@ router.get('/', async (req, res) => {
     // Serialize data so the template can read it
     const jobs = jobData.map((job) => job.get({ plain: true }));
 
-        console.log('Categories are running');
-        const categoriesData = await Category.findAll({
-          include: [
-            {
-              model: User,
-            },
-            {
-              model: Category,
-            },
-          ],
-        });
-    
-        // Serialize data so the template can read it
-        const categories = categoriesData.map((category) => category.get({ plain: true }));
+    console.log('Categories are running');
+    const categoriesData = await Category.findAll({});
 
+    // Serialize data so the template can read it
+    const categories = categoriesData.map((category) => category.get({ plain: true }));
 
+    console.log('Loading Companies');
     const companies = [];
-
     jobs.forEach((job) => {
       if (!companies.includes(job.company_name)) {
         companies.push(job.company_name)
       }
     })
 
-    
     // Pass serialized data and session flag into template
     res.render('homepage', {
       jobs,
@@ -54,35 +43,36 @@ router.get('/', async (req, res) => {
     });
   } catch (err) {
     res.status(500).json(err);
-  });
-
-  router.get('/jobs/:id', async (req, res) => {
-    try {
-      console.log('Home Job route is running')
-const jobData = await Job.findByPk(req.params.id, {
-  include: [
-    {
-      model: User,
-    }
-    {
-      model: Category,
-    },
-  ],
+  };
 });
 
+router.get('/jobs/:id', async (req, res) => {
 
-  // Serialize data so the template can read it
-  const job = jobData.get({ plain: true });
+  try {
+    console.log('Home Job route is running')
+    const jobData = await Job.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+        },
+        {
+          model: Category,
+        },
+      ],
+    });
 
-  console.log(job);
-  // Pass serialized data and session flag into template
-  res.render('job-details', {
-    job,
-    logged_in: req.session.logged_in
-  });
-} catch (err) {
-  res.status(500).json(err);
-}
+    // Serialize data so the template can read it
+    const job = jobData.get({ plain: true });
+
+    console.log(job);
+    // Pass serialized data and session flag into template
+    res.render('job-details', {
+      job,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 // Use withAuth middleware to prevent access to route
