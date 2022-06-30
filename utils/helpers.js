@@ -1,12 +1,11 @@
-const TimeAgo = require('javascript-time-ago');
+const TimeAgo = require("javascript-time-ago");
 
 // English.
-const en = require('javascript-time-ago/locale/en');
-TimeAgo.addDefaultLocale(en)
+const en = require("javascript-time-ago/locale/en");
+TimeAgo.addDefaultLocale(en);
 
 // Create formatter (English).
-const timeAgo = new TimeAgo('en-GB)')
-
+const timeAgo = new TimeAgo("en-GB)");
 
 module.exports = {
   format_date: (date) => {
@@ -20,7 +19,7 @@ module.exports = {
   recent_date: (date) => {
     // Format date as MM/DD/YYYY
     return timeAgo.format(date);
-  }
+  },
   get_emoji: () => {
     const randomNum = Math.random();
 
