@@ -2,13 +2,22 @@
 <div class="filter-box">
     <div class="filter-dropdown">
 
-    
-<div class="listing">
+        <section class="job-list" id="jobs">
 
-    {{#each jobs as |job|}}
-    <h1>{{job.title}}</h1>
-    <h2>{{job.company_name}}</h2>
-    {{recent_date job.date_created}}
-    <a href="/jobs/{{job.id}}">Read More</a>
-    {{/each}}
-</div>
+            {{#each jobs as |job|}}
+            <div class="job-card">
+                <div class="job-name">
+                    <div class="job-detail">
+                        <h4>{{job.company_name}}</h4>
+                        <h3>{{job.title}}</h3>
+                        <p>{{truncate_text job.description 80}}</p>
+                    </div>
+                </div>
+                <div class="job-posted">
+                    {{recent_date job.date_created}}
+                </div>
+            </div>
+            {{/each}}
+
+            <button class="job-more">More List</button>
+        </section>

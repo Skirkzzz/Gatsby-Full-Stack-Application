@@ -20,6 +20,15 @@ module.exports = {
     // Format date as MM/DD/YYYY
     return timeAgo.format(date);
   },
+  truncate_text: (text, length) => {
+    // Truncate text to length
+
+    if (text.length > length) {
+      return text.substring(0, length) + "...";
+    } else {
+      return text;
+    }
+  },
   get_emoji: () => {
     const randomNum = Math.random();
 
