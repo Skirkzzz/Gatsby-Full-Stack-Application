@@ -8,6 +8,7 @@
     {{#each jobs as |job|}}
     <h1>{{job.title}}</h1>
     <h2>{{job.company_name}}</h2>
+    {{recent_date job.date_created}}
     <a href="/jobs/{{job.id}}">Read More</a>
     {{/each}}
 </div>
