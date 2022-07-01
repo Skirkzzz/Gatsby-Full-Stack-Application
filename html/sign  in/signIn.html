@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../homePage/assets/style.css">
     <!--font-->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
     <!--icons-->
@@ -13,11 +13,27 @@
     <title>Job Search App</title>
 </head>
 <body>
-    <form action="/action_page.php" style="border:1px solid #ccc">
+    <!--navbar-->
+    <nav class="navbar">
+      <h2 class="navbar-logo"><a href="../homePage/index.html">iJOBS</a></h2>
+      <div class="navbar-menu">
+          <a href="../homePage/index.html">Find Jobs</a>
+          <a href="../postform/post.html" target="_blank">Post Jobs<a>
+          <a href="../sign  in/signIn.html" target="_blank">Sign In / Log In</a>
+      </div>
+    </nav>
+    
+
+    <form >
         <div class="container">
-          <h1>Sign Up</h1>
-          <p>Please fill in this form to create an account.</p>
+
+          <h1>Sign In</h1>
+          <p>Please fill in this form to create an account.</p> 
+          <p class="alreadyAcc">Already have an account? Please, <a href="./login.html"> Log in</a></p>
           <hr>
+
+          <label for="fullName"><b>Full Name</b></label>
+          <input type="text" placeholder="Enter Full Name" name="fullName" required>
       
           <label for="email"><b>Email</b></label>
           <input type="text" placeholder="Enter Email" name="email" required>
@@ -28,17 +44,16 @@
           <label for="psw-repeat"><b>Repeat Password</b></label>
           <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
           
+          <label for="cv"><b>Upload CV</b></label><br> <br>
+          <input type="file" id="myFile" name="filename"><br>
+          <br>
           <label>
             <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
           </label><br>
 
-          <input type="file" id="myFile" name="filename"><br>
-         
-          <a href="./login.html">If already registered, please login</a>
-      
           <div class="clearfix">
             <button type="button" class="cancelbtn">Cancel</button>
-            <button type="submit" class="signupbtn">Sign Up</button>
+            <button type="submit" class="signupbtn">Sign In</button>
           </div>
         </div>
       </form>
