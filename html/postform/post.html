@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../homePage/assets/style.css">
     <!--font-->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
     <!--icons-->
@@ -13,31 +13,53 @@
     <title>Job Search App</title>
 </head>
 <body>
-    <h2>Post Job Form</h2>
+    <!--navbar-->
+    <nav class="navbar">
+      <h2 class="navbar-logo"><a href="../homePage/index.html">iJOBS</a></h2>
+      <div class="navbar-menu">
+          <a href="../homePage/index.html">Find Jobs</a>
+          <a href="../postform/post.html" target="_blank">Post Jobs<a>
+          <a href="../sign  in/signIn.html" target="_blank">Sign In / Log In</a>
+      </div>
+    </nav>
 
+  
     <form>
-      <label for="companyName">Company Name:</label><br>
-      <input type="text" id="companyName" name="companyName" placeholder="Company Name" required><br>
+      <div class="container">
+        <h1>Post Job Form</h1>
 
-      <label for="jobTitle">Job Title:</label><br>
-      <input type="text" id="jobTitle" name="jobTitle" placeholder="Job Title" required><br>
+        <p>Please fill in this form to to post a job.</p>   
 
-      <label for="jobDescription">Job Description:</label><br>
-      <input type="text" id="Description" name="jobDescription" placeholder="Job Description " required><br>
+        <hr>
 
-      <label for="salary">Salary:</label><br>
-      <input type="text" id="salary" name="salary" placeholder="salary£" required><br>
+        <label for="companyName"><b>Company Name</b></label>
+        <input type="text" id="companyName" name="companyName" placeholder="Enter Company Name" required>
 
-      <label for="location">Location:</label><br>
-      <input type="text" id="location" name="location" placeholder="location" required><br>
+        <label for="jobTitle"><b>Job Title</b></label>
+        <input type="text" id="jobTitle" name="jobTitle" placeholder="Enter Job Title" required>
 
-      <label for="type">Type:</label><br>
-      <input type="text" id="type" name="type" placeholder="permanent,part time,ecc" required><br>
+        <label for="jobDescription"><b>Job Description</b></label>
+        <input type="text" id="Description" name="jobDescription" placeholder="Enter Job Description " required>
 
-      <label for="author">Author:</label><br>
-      <input type="text" id="author" name="author" placeholder="Author" required><br>
+        <label for="salary"><b>Salary</b></label>
+        <input type="text" id="salary" name="salary" placeholder="Enter salary £" required><br>
 
-      <input type="submit" value="Submit">
+        <label for="location"><b>Location</b></label><br>
+        <input type="text" id="location" name="location" placeholder="Enter Location" required><br>
+
+        <label for="type"><b>Type</b></label>
+        <input type="text" id="type" name="type" placeholder="permanent,part time,ecc" required><br>
+
+        <label for="author"><b>Author</b></label>
+        <input type="text" id="author" name="author" placeholder="Enter Author Name" required><br>
+
+        <div class="clearfix">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Submit Form</button>
+        </div>
+
+      </div>
+      
 
 
 
