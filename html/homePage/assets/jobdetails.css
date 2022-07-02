@@ -167,8 +167,9 @@ header {
     margin:5%;
     padding:1rem;
     background-color: var(--greyColor);
-
+    padding: 20px;
 }
+
 
 .job-card {
     display:flex;
@@ -189,20 +190,24 @@ header {
 
 .job-name{
     display:flex;
+
 }
 
 .job-detail {
-    padding: 01 0px;
+    padding: 20px;
 }
+
 
 .job-detail > h4 {
     color : var(--primaryColor);
     font-size:0.9rem;
+    padding: 20px;
 }
 
 .job-detail > p {
     display:-webkit-box;
     overflow: hidden;
+    padding: 20px;
 }
 
 .job-more {
