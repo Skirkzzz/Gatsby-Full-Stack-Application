@@ -105,15 +105,10 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/signup', (req, res) => {
+router.get('/newjob', (req, res) => {
 
-  // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/signup');
-    return;
-  }
+  res.render('newjob');
 
-  res.render('signup');
 });
 
 module.exports = router;
