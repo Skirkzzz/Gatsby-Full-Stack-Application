@@ -17,12 +17,12 @@ and let the a job searcher to become a potential employee.
     
 
 ## Usage
-- Employers:
+EMPLOYERS:
 - Post a job advert;
 -  Be able to filter CV information via a database;
 - To have secure data via a login screen.
 
-- Employee:
+EMPLOYEE:
 - To view posted job adverts;
 - To have data organised via a database so that it can be filtered;
 - To be able to post their CV;
