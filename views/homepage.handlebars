@@ -1,24 +1,197 @@
+<!--search-->
+<div class="search-wrapper">
+    <div class="search-box">
+        <div class="search-card">
+            <input class="search-input" type="text" placeholder="job title or keyword">
+            <button class="search-button">Search</button>
+        </div>
+    </div>
+</div>
+
 <!--filter box-->
 <div class="filter-box">
     <div class="filter-dropdown">
 
-        <section class="job-list" id="jobs">
+        <select class="filter-select" id="job-level" name="job-level">
+            <option>Job Level</option>
+            <option>Entry</option>
+            <option>Mid-Senior</option>
+            <option>Director</option>
+        </select>
 
-            {{#each jobs as |job|}}
-            <div class="job-card">
-                <div class="job-name">
-                    <div class="job-detail">
-                        <h4>{{job.company_name}}</h4>
-                        <h3>{{job.title}}</h3>
-                        <p>{{truncate_text job.description 80}}</p>
-                        <h3 href="../html/jobDetails/jobdetails.html">See More</h3>
-                    </div>
-                </div>
-                <div class="job-posted">
-                    {{recent_date job.date_created}}
-                </div>
+        <select class="filter-select" id="job-function" name="job-function">
+            <option>Job Function</option>
+            <option>IT</option>
+            <option>Management</option>
+            <option>Education</option>
+        </select>
+
+        <select class="filter-select" id="employement" name="employement">
+            <option>Employement Type</option>
+            <option>Internship</option>
+            <option>Part Time</option>
+            <option>Full Time</option>
+        </select>
+
+        <select class="filter-select" id="location" name="location">
+            <option>Locations</option>
+            <option>Remote</option>
+            <option>North-West</option>
+            <option>London</option>
+        </select>
+
+        <select class="filter-select" id="education" name="education">
+            <option>Education</option>
+            <option>High School</option>
+            <option>Bachelor's Degree</option>
+            <option>Master's Degree</option>
+        </select>
+    </div>
+
+    <div class="filter-chosen">
+
+        <div class="chosen-card">
+            Remote <i class="fas fa-times-circle"></i>
+        </div>
+
+        <div class="chosen-card">
+            Full Time <i class="fas fa-times-circle"></i>
+        </div>
+
+        <div class="chosen-card">
+            Financial Tech <i class="fas fa-times-circle"></i>
+        </div>
+
+        <div class="chosen-card">
+            Entry Level <i class="fas fa-times-circle"></i>
+        </div>
+    </div>
+</div>
+
+<!--job listying-->
+<section class="job-list" id="jobs">
+    <div class="job-card">
+        <div class="job-name">
+            <div class="job-detail">
+                <h4>Tesla</h4>
+                <h3>Mechanical Engineer</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, officiis.</p>
             </div>
-            {{/each}}
+        </div>
+        <div class="job-posted">
+            Posted 2 mins ago
+        </div>
+    </div>
 
-            <button class="job-more">More List</button>
-        </section>
+    <div class="job-card">
+        <div class="job-name">
+            <div class="job-detail">
+                <h4>Ebay</h4>
+                <h3>Business Development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, officiis.</p>
+            </div>
+        </div>
+        <div class="job-posted">
+            Posted 2 mins ago
+        </div>
+    </div>
+
+    <div class="job-card">
+        <div class="job-name">
+            <div class="job-detail">
+                <h4>Tiktok</h4>
+                <h3>Digital Marketing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, officiis.</p>
+            </div>
+        </div>
+        <div class="job-posted">
+            Posted 2 mins ago
+        </div>
+    </div>
+
+    <div class="job-card">
+        <div class="job-name">
+            <div class="job-detail">
+                <h4>YouTube</h4>
+                <h3>Web Development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, officiis.</p>
+            </div>
+        </div>
+        <div class="job-posted">
+            Posted 2 mins ago
+        </div>
+    </div>
+
+    <div class="job-card">
+        <div class="job-name">
+            <div class="job-detail">
+                <h4>Amazon</h4>
+                <h3>Software Engineer</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, officiis.</p>
+            </div>
+        </div>
+        <div class="job-posted">
+            Posted 2 mins ago
+        </div>
+    </div>
+
+    <button class="job-more">More List</button>
+</section>
+
+<!--join-->
+<section class="join">
+    <div class="join-detail">
+        <h1 class="section-title">LET'S START YOUR NEW JOB WITH US</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt impedit vitae dignissimos quis quisquam placeat
+            doloribus eum, ea et officiis.</p>
+    </div>
+    <button class="join-button">Join Now</button>
+</section>
+
+<!--featured company-->
+<section class="featured" id="companies">
+    <h1 class="section-title">Featured Companies </h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus deleniti fugit libero natus deserunt! Eos sunt
+        quibusdam aliquam dolores obcaecati!</p>
+    <div class="featured-wrapper">
+        <div class="featured-card">
+            <p>Ebay</p>
+            <button class="featured-button"> view 2 jobs</button>
+        </div>
+
+        <div class="featured-card">
+            <p>YouTube</p>
+            <button class="featured-button"> view 3 jobs</button>
+        </div>
+
+        <div class="featured-card">
+            <p>Tiktok</p>
+            <button class="featured-button"> view 4 jobs</button>
+        </div>
+
+        <div class="featured-card">
+            <p>Tesla</p>
+            <button class="featured-button"> view 1 job</button>
+        </div>
+
+        <div class="featured-card">
+            <p>Google</p>
+            <button class="featured-button"> view 2 jobs</button>
+        </div>
+
+        <div class="featured-card">
+            <p>Instagram</p>
+            <button class="featured-button"> view 3 jobs</button>
+        </div>
+
+        <div class="featured-card">
+            <p>Aplle</p>
+            <button class="featured-button"> view 5 jobs</button>
+        </div>
+
+        <div class="featured-card">
+            <p>Amazon</p>
+            <button class="featured-button"> view 7 jobs</button>
+        </div>
+    </div>
+</section>
