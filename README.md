@@ -11,7 +11,7 @@ and let the a job searcher to become a potential employee.
 - [Usage](#usage)
 - [Contribution](#contribution)
 - [Challenges](#challenges)
-- [FutureDevelopment] (#future development)
+- [Developments] (#developments)
 - [Questions](#questions)
     
     
@@ -39,7 +39,7 @@ with functionality and design
 - Technically challenging and continuously learning
 -  Motivating each other to deliver on our goal
 
-## Future development
+## Developments
 - Develop the use of dynamic tags
 - Getting the functionality for uploading CVs
 - Improving search functionality
