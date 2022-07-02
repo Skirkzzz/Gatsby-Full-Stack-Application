@@ -11,7 +11,7 @@ and let the a job searcher to become a potential employee.
 - [Usage](#usage)
 - [Contribution](#contribution)
 - [Challenges](#challenges)
-- [Developments] (#developments)
+- [Developments](#developments)
 - [Questions](#questions)
     
     
